@@ -1,0 +1,567 @@
+2022-02-25 09:24:00.384  INFO 9960 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Starting EmployeeManagementSystemApplication using Java 1.8.0_202 on DESKTOP-N8AS16L with PID 9960 (F:\BE\employee_management_system\target\classes started by Truong Giang in F:\BE\employee_management_system)
+2022-02-25 09:24:00.391  INFO 9960 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : No active profile set, falling back to default profiles: default
+2022-02-25 09:24:00.437  INFO 9960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-25 09:24:00.437  INFO 9960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-25 09:24:01.092  INFO 9960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-25 09:24:01.147  INFO 9960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2022-02-25 09:24:01.340  INFO 9960 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webConfiguration' of type [com.truonggiang.employee_management_system.config.WebConfiguration$$EnhancerBySpringCGLIB$$5e73ed0f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-25 09:24:01.646  INFO 9960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-02-25 09:24:01.653  INFO 9960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 09:24:01.654  INFO 9960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 09:24:01.729  INFO 9960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 09:24:01.729  INFO 9960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1291 ms
+2022-02-25 09:24:01.778  WARN 9960 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-25 09:24:01.829  INFO 9960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-25 09:24:02.007  INFO 9960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-25 09:24:02.868  INFO 9960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:24:03.410 DEBUG 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-02-25 09:24:03.516 DEBUG 9960 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-02-25 09:24:03.591 DEBUG 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-02-25 09:24:03.621 DEBUG 9960 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-02-25 09:24:03.710  INFO 9960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 09:24:03.743  INFO 9960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2022-02-25 09:24:03.750  INFO 9960 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Started EmployeeManagementSystemApplication in 3.752 seconds (JVM running for 4.733)
+2022-02-25 09:28:20.257  INFO 9960 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:28:20.259  INFO 9960 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-25 09:28:20.264  INFO 9960 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-25 09:28:25.320  INFO 16188 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Starting EmployeeManagementSystemApplication using Java 1.8.0_202 on DESKTOP-N8AS16L with PID 16188 (F:\BE\employee_management_system\target\classes started by Truong Giang in F:\BE\employee_management_system)
+2022-02-25 09:28:25.321  INFO 16188 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : No active profile set, falling back to default profiles: default
+2022-02-25 09:28:25.358  INFO 16188 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-25 09:28:25.359  INFO 16188 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-25 09:28:25.983  INFO 16188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-25 09:28:26.032  INFO 16188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2022-02-25 09:28:26.214  INFO 16188 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webConfiguration' of type [com.truonggiang.employee_management_system.config.WebConfiguration$$EnhancerBySpringCGLIB$$6c0faf6d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-25 09:28:26.489  INFO 16188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-02-25 09:28:26.495  INFO 16188 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 09:28:26.496  INFO 16188 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 09:28:26.568  INFO 16188 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 09:28:26.568  INFO 16188 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1209 ms
+2022-02-25 09:28:26.618  WARN 16188 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-25 09:28:26.662  INFO 16188 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-25 09:28:26.846  INFO 16188 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-25 09:28:27.514  INFO 16188 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:28:28.078 DEBUG 16188 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-02-25 09:28:28.180 DEBUG 16188 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-02-25 09:28:28.257 DEBUG 16188 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-02-25 09:28:28.290 DEBUG 16188 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-02-25 09:28:28.445  INFO 16188 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 09:28:28.486  INFO 16188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2022-02-25 09:28:28.497  INFO 16188 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Started EmployeeManagementSystemApplication in 3.522 seconds (JVM running for 4.481)
+2022-02-25 09:35:05.902  INFO 16188 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-25 09:35:05.902  INFO 16188 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-25 09:35:05.902 DEBUG 16188 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-02-25 09:35:05.902 DEBUG 16188 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-02-25 09:35:05.902 DEBUG 16188 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-02-25 09:35:05.903 DEBUG 16188 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1e6d23f6
+2022-02-25 09:35:05.903 DEBUG 16188 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@8497ff7
+2022-02-25 09:35:05.903 DEBUG 16188 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-02-25 09:35:05.903  INFO 16188 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-02-25 09:35:05.917 DEBUG 16188 --- [http-nio-9999-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#registerUser(RegisterRequest)
+2022-02-25 09:35:05.925 DEBUG 16188 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/signup", parameters={}
+2022-02-25 09:35:05.926 DEBUG 16188 --- [http-nio-9999-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#registerUser(RegisterRequest)
+2022-02-25 09:35:05.993 DEBUG 16188 --- [http-nio-9999-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(userName=admin01, password=123456, fullName=admin01, numberCode=admin01)]
+2022-02-25 09:35:06.063  WARN 16188 --- [http-nio-9999-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.truonggiang.employee_management_system.controller.auth.AuthController.registerUser(com.truonggiang.employee_management_system.model.auth.RegisterRequest): [Field error in object 'registerRequest' on field 'password': rejected value [123456]; codes [Max.registerRequest.password,Max.password,Max.java.lang.String,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.password,password]; arguments []; default message [password],16]; default message [must be less than or equal to 16]] ]
+2022-02-25 09:35:06.063 DEBUG 16188 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2022-02-25 09:35:06.067 DEBUG 16188 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2022-02-25 09:35:06.068 DEBUG 16188 --- [http-nio-9999-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-02-25 09:35:06.080 DEBUG 16188 --- [http-nio-9999-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-25 09:35:06.081 DEBUG 16188 --- [http-nio-9999-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Feb 25 09:35:06 ICT 2022, status=400, error=Bad Request, trace=org.springframework.we (truncated)...]
+2022-02-25 09:35:06.115 DEBUG 16188 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 400
+2022-02-25 09:35:26.915  INFO 16188 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:35:26.917  INFO 16188 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-25 09:35:26.922  INFO 16188 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-25 09:35:31.683  INFO 21348 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Starting EmployeeManagementSystemApplication using Java 1.8.0_202 on DESKTOP-N8AS16L with PID 21348 (F:\BE\employee_management_system\target\classes started by Truong Giang in F:\BE\employee_management_system)
+2022-02-25 09:35:31.684  INFO 21348 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : No active profile set, falling back to default profiles: default
+2022-02-25 09:35:31.720  INFO 21348 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-25 09:35:31.721  INFO 21348 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-25 09:35:32.357  INFO 21348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-25 09:35:32.402  INFO 21348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2022-02-25 09:35:32.567  INFO 21348 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webConfiguration' of type [com.truonggiang.employee_management_system.config.WebConfiguration$$EnhancerBySpringCGLIB$$1b72368f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-25 09:35:32.856  INFO 21348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-02-25 09:35:32.862  INFO 21348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 09:35:32.862  INFO 21348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 09:35:32.934  INFO 21348 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 09:35:32.934  INFO 21348 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1212 ms
+2022-02-25 09:35:32.984  WARN 21348 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-25 09:35:33.027  INFO 21348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-25 09:35:33.213  INFO 21348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-25 09:35:34.032  INFO 21348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:35:34.511 DEBUG 21348 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-02-25 09:35:34.612 DEBUG 21348 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-02-25 09:35:34.684 DEBUG 21348 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-02-25 09:35:34.715 DEBUG 21348 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-02-25 09:35:34.810  INFO 21348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 09:35:34.841  INFO 21348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2022-02-25 09:35:34.849  INFO 21348 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Started EmployeeManagementSystemApplication in 3.502 seconds (JVM running for 4.472)
+2022-02-25 09:35:48.265  INFO 21348 --- [http-nio-9999-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-25 09:35:48.265  INFO 21348 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-25 09:35:48.265 DEBUG 21348 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-02-25 09:35:48.265 DEBUG 21348 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-02-25 09:35:48.265 DEBUG 21348 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-02-25 09:35:48.266 DEBUG 21348 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@12fc646
+2022-02-25 09:35:48.267 DEBUG 21348 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@694a4175
+2022-02-25 09:35:48.267 DEBUG 21348 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-02-25 09:35:48.267  INFO 21348 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-25 09:35:48.280 DEBUG 21348 --- [http-nio-9999-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#registerUser(RegisterRequest)
+2022-02-25 09:35:48.288 DEBUG 21348 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/signup", parameters={}
+2022-02-25 09:35:48.289 DEBUG 21348 --- [http-nio-9999-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#registerUser(RegisterRequest)
+2022-02-25 09:35:48.352 DEBUG 21348 --- [http-nio-9999-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(userName=admin01, password=123456, fullName=admin01, numberCode=admin01)]
+2022-02-25 09:35:48.414  WARN 21348 --- [http-nio-9999-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.truonggiang.employee_management_system.controller.auth.AuthController.registerUser(com.truonggiang.employee_management_system.model.auth.RegisterRequest): [Field error in object 'registerRequest' on field 'password': rejected value [123456]; codes [Max.registerRequest.password,Max.password,Max.java.lang.String,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.password,password]; arguments []; default message [password],16]; default message [must be less than or equal to 16]] ]
+2022-02-25 09:35:48.414 DEBUG 21348 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2022-02-25 09:35:48.417 DEBUG 21348 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2022-02-25 09:35:48.418 DEBUG 21348 --- [http-nio-9999-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-02-25 09:35:48.430 DEBUG 21348 --- [http-nio-9999-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-25 09:35:48.430 DEBUG 21348 --- [http-nio-9999-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Fri Feb 25 09:35:48 ICT 2022, status=400, error=Bad Request, trace=org.springframework.we (truncated)...]
+2022-02-25 09:35:48.463 DEBUG 21348 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 400
+2022-02-25 09:39:16.428  INFO 21348 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:39:16.428  INFO 21348 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-25 09:39:16.428  INFO 21348 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-25 09:39:21.474  INFO 13336 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Starting EmployeeManagementSystemApplication using Java 1.8.0_202 on DESKTOP-N8AS16L with PID 13336 (F:\BE\employee_management_system\target\classes started by Truong Giang in F:\BE\employee_management_system)
+2022-02-25 09:39:21.490  INFO 13336 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : No active profile set, falling back to default profiles: default
+2022-02-25 09:39:21.537  INFO 13336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-25 09:39:21.537  INFO 13336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-25 09:39:22.227  INFO 13336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-25 09:39:22.275  INFO 13336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2022-02-25 09:39:22.466  INFO 13336 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webConfiguration' of type [com.truonggiang.employee_management_system.config.WebConfiguration$$EnhancerBySpringCGLIB$$57825824] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-25 09:39:22.766  INFO 13336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-02-25 09:39:22.766  INFO 13336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 09:39:22.766  INFO 13336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 09:39:22.839  INFO 13336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 09:39:22.855  INFO 13336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1318 ms
+2022-02-25 09:39:22.902  WARN 13336 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-25 09:39:22.967  INFO 13336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-25 09:39:23.169  INFO 13336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-25 09:39:23.953  INFO 13336 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:39:24.502 DEBUG 13336 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-02-25 09:39:24.611 DEBUG 13336 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-02-25 09:39:24.690 DEBUG 13336 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-02-25 09:39:24.721 DEBUG 13336 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-02-25 09:39:24.816  INFO 13336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 09:39:24.847  INFO 13336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2022-02-25 09:39:24.847  INFO 13336 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Started EmployeeManagementSystemApplication in 3.842 seconds (JVM running for 4.8)
+2022-02-25 09:39:34.059  INFO 13336 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-25 09:39:34.059  INFO 13336 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-25 09:39:34.059 DEBUG 13336 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-02-25 09:39:34.060 DEBUG 13336 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-02-25 09:39:34.060 DEBUG 13336 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-02-25 09:39:34.061 DEBUG 13336 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@724d8d3a
+2022-02-25 09:39:34.061 DEBUG 13336 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3a5b8cad
+2022-02-25 09:39:34.061 DEBUG 13336 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-02-25 09:39:34.061  INFO 13336 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-25 09:39:34.077 DEBUG 13336 --- [http-nio-9999-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#registerUser(RegisterRequest)
+2022-02-25 09:39:34.085 DEBUG 13336 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/signup", parameters={}
+2022-02-25 09:39:34.087 DEBUG 13336 --- [http-nio-9999-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#registerUser(RegisterRequest)
+2022-02-25 09:39:34.155 DEBUG 13336 --- [http-nio-9999-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(userName=admin01, password=123456, fullName=admin01, numberCode=admin01)]
+2022-02-25 09:39:34.194  INFO 13336 --- [http-nio-9999-exec-1] c.t.e.controller.auth.AuthController     : Register name =admin01
+2022-02-25 09:39:34.387 DEBUG 13336 --- [http-nio-9999-exec-1] org.hibernate.SQL                        : select role0_.role_id as role_id1_0_, role0_.description as descript2_0_, role0_.role_cd as role_cd3_0_, role0_.role_name as role_nam4_0_ from role role0_ where role0_.role_cd=?
+2022-02-25 09:39:34.443 DEBUG 13336 --- [http-nio-9999-exec-1] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2022-02-25 09:39:34.461 ERROR 13336 --- [http-nio-9999-exec-1] o.hibernate.id.enhanced.TableStructure   : could not read a hi value
+
+java.sql.SQLSyntaxErrorException: Table 'employee_management_system.hibernate_sequence' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1009) ~[mysql-connector-java-8.0.28.jar:8.0.28]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.id.enhanced.TableStructure.executeQuery(TableStructure.java:220) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.id.enhanced.TableStructure.access$300(TableStructure.java:45) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.id.enhanced.TableStructure$1$1.execute(TableStructure.java:142) [hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.id.enhanced.TableStructure$1$1.execute(TableStructure.java:130) [hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.jdbc.WorkExecutor.executeReturningWork(WorkExecutor.java:55) [hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.jdbc.AbstractReturningWork.accept(AbstractReturningWork.java:34) [hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:57) [hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.id.enhanced.TableStructure$1.getNextValue(TableStructure.java:129) [hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.id.enhanced.NoopOptimizer.generate(NoopOptimizer.java:40) [hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.id.enhanced.SequenceStyleGenerator.generate(SequenceStyleGenerator.java:534) [hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:115) [hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185) [hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128) [hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55) [hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362) ~[spring-orm-5.3.15.jar:5.3.15]
+	at com.sun.proxy.$Proxy116.persist(Unknown Source) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311) ~[spring-orm-5.3.15.jar:5.3.15]
+	at com.sun.proxy.$Proxy116.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:630) ~[spring-data-jpa-2.6.1.jar:2.6.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:639) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.15.jar:5.3.15]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.15.jar:5.3.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.6.1.jar:2.6.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.15.jar:5.3.15]
+	at com.sun.proxy.$Proxy120.save(Unknown Source) ~[na:na]
+	at com.truonggiang.employee_management_system.service.auth.AuthServiceImpl.registerUser(AuthServiceImpl.java:43) ~[classes/:na]
+	at com.truonggiang.employee_management_system.controller.auth.AuthController.registerUser(AuthController.java:41) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_202]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at com.truonggiang.employee_management_system.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:46) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.1.jar:5.6.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_202]
+
+2022-02-25 09:39:34.463 ERROR 13336 --- [http-nio-9999-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table 'employee_management_system.hibernate_sequence' doesn't exist
+2022-02-25 09:39:34.471  INFO 13336 --- [http-nio-9999-exec-1] c.t.e.controller.auth.AuthController     : Code = 500 INTERNAL_SERVER_ERROR,Server error!,time = 276
+2022-02-25 09:39:34.484 DEBUG 13336 --- [http-nio-9999-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-25 09:39:34.484 DEBUG 13336 --- [http-nio-9999-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.truonggiang.employee_management_system.model.BaseModel@67976abd]
+2022-02-25 09:39:34.495 DEBUG 13336 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2022-02-25 09:42:04.076  INFO 13336 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:42:04.076  INFO 13336 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-25 09:42:04.092  INFO 13336 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-25 09:42:09.152  INFO 12788 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Starting EmployeeManagementSystemApplication using Java 1.8.0_202 on DESKTOP-N8AS16L with PID 12788 (F:\BE\employee_management_system\target\classes started by Truong Giang in F:\BE\employee_management_system)
+2022-02-25 09:42:09.152  INFO 12788 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : No active profile set, falling back to default profiles: default
+2022-02-25 09:42:09.199  INFO 12788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-25 09:42:09.199  INFO 12788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-25 09:42:09.827  INFO 12788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-25 09:42:09.874  INFO 12788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2022-02-25 09:42:10.062  INFO 12788 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webConfiguration' of type [com.truonggiang.employee_management_system.config.WebConfiguration$$EnhancerBySpringCGLIB$$c25317b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-25 09:42:10.361  INFO 12788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-02-25 09:42:10.377  INFO 12788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 09:42:10.377  INFO 12788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 09:42:10.487  INFO 12788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 09:42:10.487  INFO 12788 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1288 ms
+2022-02-25 09:42:10.549  WARN 12788 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-25 09:42:10.612  INFO 12788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-25 09:42:10.800  INFO 12788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-25 09:42:11.522  INFO 12788 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:42:12.056 DEBUG 12788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-02-25 09:42:12.182 DEBUG 12788 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-02-25 09:42:12.276 DEBUG 12788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-02-25 09:42:12.307 DEBUG 12788 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-02-25 09:42:12.401  INFO 12788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 09:42:12.448  INFO 12788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2022-02-25 09:42:12.448  INFO 12788 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Started EmployeeManagementSystemApplication in 3.656 seconds (JVM running for 4.684)
+2022-02-25 09:44:15.184  INFO 12788 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:44:15.184  INFO 12788 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-25 09:44:15.184  INFO 12788 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-25 09:44:20.162  INFO 21332 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Starting EmployeeManagementSystemApplication using Java 1.8.0_202 on DESKTOP-N8AS16L with PID 21332 (F:\BE\employee_management_system\target\classes started by Truong Giang in F:\BE\employee_management_system)
+2022-02-25 09:44:20.162  INFO 21332 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : No active profile set, falling back to default profiles: default
+2022-02-25 09:44:20.210  INFO 21332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-25 09:44:20.210  INFO 21332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-25 09:44:20.837  INFO 21332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-25 09:44:20.884  INFO 21332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2022-02-25 09:44:21.056  INFO 21332 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webConfiguration' of type [com.truonggiang.employee_management_system.config.WebConfiguration$$EnhancerBySpringCGLIB$$5cd1c022] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-25 09:44:21.323  INFO 21332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-02-25 09:44:21.323  INFO 21332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 09:44:21.323  INFO 21332 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 09:44:21.402  INFO 21332 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 09:44:21.402  INFO 21332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1192 ms
+2022-02-25 09:44:21.449  WARN 21332 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-25 09:44:21.496  INFO 21332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-25 09:44:21.669  INFO 21332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-25 09:44:22.328  INFO 21332 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:44:22.815 DEBUG 21332 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-02-25 09:44:22.924 DEBUG 21332 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-02-25 09:44:23.003 DEBUG 21332 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-02-25 09:44:23.019 DEBUG 21332 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-02-25 09:44:23.113  INFO 21332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 09:44:23.144  INFO 21332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2022-02-25 09:44:23.144  INFO 21332 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Started EmployeeManagementSystemApplication in 3.319 seconds (JVM running for 4.259)
+2022-02-25 09:44:29.412  INFO 21332 --- [http-nio-9999-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-25 09:44:29.412  INFO 21332 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-25 09:44:29.412 DEBUG 21332 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-02-25 09:44:29.413 DEBUG 21332 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-02-25 09:44:29.413 DEBUG 21332 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-02-25 09:44:29.413 DEBUG 21332 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4367a5a9
+2022-02-25 09:44:29.414 DEBUG 21332 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@799effed
+2022-02-25 09:44:29.414 DEBUG 21332 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-02-25 09:44:29.414  INFO 21332 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-25 09:44:29.428 DEBUG 21332 --- [http-nio-9999-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#registerUser(RegisterRequest)
+2022-02-25 09:44:29.435 DEBUG 21332 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/signup", parameters={}
+2022-02-25 09:44:29.436 DEBUG 21332 --- [http-nio-9999-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#registerUser(RegisterRequest)
+2022-02-25 09:44:29.513 DEBUG 21332 --- [http-nio-9999-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(userName=admin01, password=123456, fullName=admin01, numberCode=admin01)]
+2022-02-25 09:44:29.553  INFO 21332 --- [http-nio-9999-exec-2] c.t.e.controller.auth.AuthController     : Register name =admin01
+2022-02-25 09:44:29.741 DEBUG 21332 --- [http-nio-9999-exec-2] org.hibernate.SQL                        : select role0_.role_id as role_id1_0_, role0_.description as descript2_0_, role0_.role_cd as role_cd3_0_, role0_.role_name as role_nam4_0_ from role role0_ where role0_.role_cd=?
+2022-02-25 09:44:29.815 DEBUG 21332 --- [http-nio-9999-exec-2] org.hibernate.SQL                        : insert into user (full_name, number_code, password, user_name) values (?, ?, ?, ?)
+2022-02-25 09:44:29.834 ERROR 21332 --- [http-nio-9999-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : Column 'user_name' cannot be null
+2022-02-25 09:44:29.848  INFO 21332 --- [http-nio-9999-exec-2] c.t.e.controller.auth.AuthController     : Code = 500 INTERNAL_SERVER_ERROR,Server error!,time = 294
+2022-02-25 09:44:29.868 DEBUG 21332 --- [http-nio-9999-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-25 09:44:29.869 DEBUG 21332 --- [http-nio-9999-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.truonggiang.employee_management_system.model.BaseModel@7eb53500]
+2022-02-25 09:44:29.880 DEBUG 21332 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2022-02-25 09:45:17.774  INFO 21332 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:45:17.774  INFO 21332 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-25 09:45:17.790  INFO 21332 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-25 09:45:23.308  INFO 10744 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Starting EmployeeManagementSystemApplication using Java 1.8.0_202 on DESKTOP-N8AS16L with PID 10744 (F:\BE\employee_management_system\target\classes started by Truong Giang in F:\BE\employee_management_system)
+2022-02-25 09:45:23.308  INFO 10744 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : No active profile set, falling back to default profiles: default
+2022-02-25 09:45:23.339  INFO 10744 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-25 09:45:23.339  INFO 10744 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-25 09:45:23.988  INFO 10744 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-25 09:45:24.035  INFO 10744 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2022-02-25 09:45:24.207  INFO 10744 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webConfiguration' of type [com.truonggiang.employee_management_system.config.WebConfiguration$$EnhancerBySpringCGLIB$$e3c5c5d5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-25 09:45:24.490  INFO 10744 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-02-25 09:45:24.490  INFO 10744 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 09:45:24.490  INFO 10744 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 09:45:24.568  INFO 10744 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 09:45:24.568  INFO 10744 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1229 ms
+2022-02-25 09:45:24.631  WARN 10744 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-25 09:45:24.678  INFO 10744 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-25 09:45:24.882  INFO 10744 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-25 09:45:25.620  INFO 10744 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:45:26.163 DEBUG 10744 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-02-25 09:45:26.264 DEBUG 10744 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-02-25 09:45:26.342 DEBUG 10744 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-02-25 09:45:26.374 DEBUG 10744 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-02-25 09:45:26.464  INFO 10744 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 09:45:26.484  INFO 10744 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2022-02-25 09:45:26.499  INFO 10744 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Started EmployeeManagementSystemApplication in 3.537 seconds (JVM running for 4.523)
+2022-02-25 09:46:07.944  INFO 10744 --- [http-nio-9999-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-25 09:46:07.945  INFO 10744 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-25 09:46:07.945 DEBUG 10744 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-02-25 09:46:07.945 DEBUG 10744 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-02-25 09:46:07.945 DEBUG 10744 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-02-25 09:46:07.946 DEBUG 10744 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@39a069a1
+2022-02-25 09:46:07.947 DEBUG 10744 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@781342d9
+2022-02-25 09:46:07.947 DEBUG 10744 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-02-25 09:46:07.947  INFO 10744 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-25 09:46:07.963 DEBUG 10744 --- [http-nio-9999-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#registerUser(RegisterRequest)
+2022-02-25 09:46:07.970 DEBUG 10744 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/signup", parameters={}
+2022-02-25 09:46:07.972 DEBUG 10744 --- [http-nio-9999-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#registerUser(RegisterRequest)
+2022-02-25 09:46:08.037 DEBUG 10744 --- [http-nio-9999-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(userName=admin01, password=123456, fullName=admin01, numberCode=admin01)]
+2022-02-25 09:46:08.084  INFO 10744 --- [http-nio-9999-exec-2] c.t.e.controller.auth.AuthController     : Register name =admin01
+2022-02-25 09:46:08.281 DEBUG 10744 --- [http-nio-9999-exec-2] org.hibernate.SQL                        : select role0_.role_id as role_id1_0_, role0_.description as descript2_0_, role0_.role_cd as role_cd3_0_, role0_.role_name as role_nam4_0_ from role role0_ where role0_.role_cd=?
+2022-02-25 09:46:08.348 DEBUG 10744 --- [http-nio-9999-exec-2] org.hibernate.SQL                        : insert into user (full_name, number_code, password, user_name) values (?, ?, ?, ?)
+2022-02-25 09:46:08.365 DEBUG 10744 --- [http-nio-9999-exec-2] org.hibernate.SQL                        : insert into role_user (user_id, role_id) values (?, ?)
+2022-02-25 09:46:08.382 ERROR 10744 --- [http-nio-9999-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table 'employee_management_system.role_user' doesn't exist
+2022-02-25 09:46:08.394  INFO 10744 --- [http-nio-9999-exec-2] c.t.e.controller.auth.AuthController     : Code = 500 INTERNAL_SERVER_ERROR,Server error!,time = 310
+2022-02-25 09:46:08.408 DEBUG 10744 --- [http-nio-9999-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-25 09:46:08.408 DEBUG 10744 --- [http-nio-9999-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.truonggiang.employee_management_system.model.BaseModel@416baa66]
+2022-02-25 09:46:08.420 DEBUG 10744 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2022-02-25 09:46:50.414  INFO 10744 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:46:50.417  INFO 10744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-25 09:46:50.422  INFO 10744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-25 09:46:55.244  INFO 12764 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Starting EmployeeManagementSystemApplication using Java 1.8.0_202 on DESKTOP-N8AS16L with PID 12764 (F:\BE\employee_management_system\target\classes started by Truong Giang in F:\BE\employee_management_system)
+2022-02-25 09:46:55.245  INFO 12764 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : No active profile set, falling back to default profiles: default
+2022-02-25 09:46:55.287  INFO 12764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-25 09:46:55.287  INFO 12764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-25 09:46:55.928  INFO 12764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-25 09:46:55.977  INFO 12764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2022-02-25 09:46:56.167  INFO 12764 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webConfiguration' of type [com.truonggiang.employee_management_system.config.WebConfiguration$$EnhancerBySpringCGLIB$$19d90339] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-25 09:46:56.448  INFO 12764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-02-25 09:46:56.455  INFO 12764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 09:46:56.455  INFO 12764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 09:46:56.534  INFO 12764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 09:46:56.534  INFO 12764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1246 ms
+2022-02-25 09:46:56.603  WARN 12764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-25 09:46:56.656  INFO 12764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-25 09:46:56.823  INFO 12764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-25 09:46:57.515  INFO 12764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 09:46:58.016 DEBUG 12764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-02-25 09:46:58.126 DEBUG 12764 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-02-25 09:46:58.208 DEBUG 12764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-02-25 09:46:58.250 DEBUG 12764 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-02-25 09:46:58.406  INFO 12764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 09:46:58.457  INFO 12764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2022-02-25 09:46:58.467  INFO 12764 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Started EmployeeManagementSystemApplication in 3.545 seconds (JVM running for 4.471)
+2022-02-25 09:47:05.249  INFO 12764 --- [http-nio-9999-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-25 09:47:05.249  INFO 12764 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-25 09:47:05.250 DEBUG 12764 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-02-25 09:47:05.250 DEBUG 12764 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-02-25 09:47:05.250 DEBUG 12764 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-02-25 09:47:05.250 DEBUG 12764 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@17f2c24a
+2022-02-25 09:47:05.251 DEBUG 12764 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4b9528fb
+2022-02-25 09:47:05.251 DEBUG 12764 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-02-25 09:47:05.251  INFO 12764 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-25 09:47:05.402 DEBUG 12764 --- [http-nio-9999-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#registerUser(RegisterRequest)
+2022-02-25 09:47:05.410 DEBUG 12764 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/signup", parameters={}
+2022-02-25 09:47:05.411 DEBUG 12764 --- [http-nio-9999-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#registerUser(RegisterRequest)
+2022-02-25 09:47:05.485 DEBUG 12764 --- [http-nio-9999-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(userName=admin01, password=123456, fullName=admin01, numberCode=admin01)]
+2022-02-25 09:47:05.525  INFO 12764 --- [http-nio-9999-exec-2] c.t.e.controller.auth.AuthController     : Register name =admin01
+2022-02-25 09:47:05.696 DEBUG 12764 --- [http-nio-9999-exec-2] org.hibernate.SQL                        : select role0_.role_id as role_id1_0_, role0_.description as descript2_0_, role0_.role_cd as role_cd3_0_, role0_.role_name as role_nam4_0_ from role role0_ where role0_.role_cd=?
+2022-02-25 09:47:05.760 DEBUG 12764 --- [http-nio-9999-exec-2] org.hibernate.SQL                        : insert into user (full_name, number_code, password, user_name) values (?, ?, ?, ?)
+2022-02-25 09:47:05.773 DEBUG 12764 --- [http-nio-9999-exec-2] org.hibernate.SQL                        : insert into user_role (user_id, role_id) values (?, ?)
+2022-02-25 09:47:05.782  INFO 12764 --- [http-nio-9999-exec-2] c.t.e.controller.auth.AuthController     : Code = 200 OK,Created account success!,time = 257
+2022-02-25 09:47:05.795 DEBUG 12764 --- [http-nio-9999-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-25 09:47:05.795 DEBUG 12764 --- [http-nio-9999-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.truonggiang.employee_management_system.model.BaseModel@696fde9e]
+2022-02-25 09:47:05.806 DEBUG 12764 --- [http-nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2022-02-25 10:09:07.526  INFO 12764 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 10:09:07.531  INFO 12764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-25 10:09:07.537  INFO 12764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-25 10:09:13.983  INFO 9048 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Starting EmployeeManagementSystemApplication using Java 1.8.0_202 on DESKTOP-N8AS16L with PID 9048 (F:\BE\employee_management_system\target\classes started by Truong Giang in F:\BE\employee_management_system)
+2022-02-25 10:09:13.984  INFO 9048 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : No active profile set, falling back to default profiles: default
+2022-02-25 10:09:14.033  INFO 9048 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-25 10:09:14.034  INFO 9048 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-25 10:09:14.658  INFO 9048 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-25 10:09:14.707  INFO 9048 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2022-02-25 10:09:14.888  INFO 9048 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webConfiguration' of type [com.truonggiang.employee_management_system.config.WebConfiguration$$EnhancerBySpringCGLIB$$19d90339] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-25 10:09:15.161  INFO 9048 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-02-25 10:09:15.167  INFO 9048 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 10:09:15.168  INFO 9048 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 10:09:15.246  INFO 9048 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 10:09:15.246  INFO 9048 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1211 ms
+2022-02-25 10:09:15.297  WARN 9048 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-25 10:09:15.344  INFO 9048 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-25 10:09:15.522  INFO 9048 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-25 10:09:16.199  INFO 9048 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 10:09:16.699 DEBUG 9048 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2022-02-25 10:09:16.802 DEBUG 9048 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-02-25 10:09:16.875 DEBUG 9048 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-02-25 10:09:16.903 DEBUG 9048 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-02-25 10:09:16.989  INFO 9048 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 10:09:17.023  INFO 9048 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2022-02-25 10:09:17.031  INFO 9048 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Started EmployeeManagementSystemApplication in 3.397 seconds (JVM running for 4.354)
+2022-02-25 10:17:44.044  INFO 9048 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 10:17:44.048  INFO 9048 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-02-25 10:17:44.053  INFO 9048 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-02-25 10:17:49.592  INFO 18164 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Starting EmployeeManagementSystemApplication using Java 1.8.0_202 on DESKTOP-N8AS16L with PID 18164 (F:\BE\employee_management_system\target\classes started by Truong Giang in F:\BE\employee_management_system)
+2022-02-25 10:17:49.593  INFO 18164 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : No active profile set, falling back to default profiles: default
+2022-02-25 10:17:49.643  INFO 18164 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-25 10:17:49.643  INFO 18164 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-25 10:17:50.440  INFO 18164 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-25 10:17:50.519  INFO 18164 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 2 JPA repository interfaces.
+2022-02-25 10:17:50.808  INFO 18164 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webConfiguration' of type [com.truonggiang.employee_management_system.config.WebConfiguration$$EnhancerBySpringCGLIB$$cc466a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-25 10:17:51.386  INFO 18164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-02-25 10:17:51.402  INFO 18164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 10:17:51.402  INFO 18164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 10:17:51.542  INFO 18164 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 10:17:51.542  INFO 18164 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1898 ms
+2022-02-25 10:17:51.613  WARN 18164 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-25 10:17:51.677  INFO 18164 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-25 10:17:51.898  INFO 18164 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-25 10:17:52.698  INFO 18164 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-25 10:17:53.293 DEBUG 18164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2022-02-25 10:17:53.429 DEBUG 18164 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-02-25 10:17:53.515 DEBUG 18164 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-02-25 10:17:53.559 DEBUG 18164 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-02-25 10:17:53.658  INFO 18164 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-25 10:17:53.693  INFO 18164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2022-02-25 10:17:53.702  INFO 18164 --- [restartedMain] .t.e.EmployeeManagementSystemApplication : Started EmployeeManagementSystemApplication in 4.603 seconds (JVM running for 5.656)
+2022-02-25 10:19:08.902  INFO 18164 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-25 10:19:08.902  INFO 18164 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-25 10:19:08.902 DEBUG 18164 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-02-25 10:19:08.903 DEBUG 18164 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-02-25 10:19:08.903 DEBUG 18164 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-02-25 10:19:08.904 DEBUG 18164 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2f1c2024
+2022-02-25 10:19:08.905 DEBUG 18164 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3ff6e24b
+2022-02-25 10:19:08.905 DEBUG 18164 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-02-25 10:19:08.905  INFO 18164 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-02-25 10:19:08.922 DEBUG 18164 --- [http-nio-9999-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#authenticateUser(LoginRequest)
+2022-02-25 10:19:08.929 DEBUG 18164 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/signin", parameters={}
+2022-02-25 10:19:08.930 DEBUG 18164 --- [http-nio-9999-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.truonggiang.employee_management_system.controller.auth.AuthController#authenticateUser(LoginRequest)
+2022-02-25 10:19:09.004 DEBUG 18164 --- [http-nio-9999-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(userName=admin01, password=123456)]
+2022-02-25 10:19:09.044  INFO 18164 --- [http-nio-9999-exec-1] c.t.e.controller.auth.AuthController     : Login account  =admin01
+2022-02-25 10:19:09.234 DEBUG 18164 --- [http-nio-9999-exec-1] org.hibernate.SQL                        : select user0_.user_id as user_id1_1_, user0_.active_flg as active_f2_1_, user0_.full_name as full_nam3_1_, user0_.number_code as number_c4_1_, user0_.password as password5_1_, user0_.status as status6_1_, user0_.user_name as user_nam7_1_ from user user0_ where user0_.number_code=? and user0_.active_flg=?
+2022-02-25 10:19:09.277 DEBUG 18164 --- [http-nio-9999-exec-1] org.hibernate.SQL                        : select roles0_.user_id as user_id1_2_0_, roles0_.role_id as role_id2_2_0_, role1_.role_id as role_id1_0_1_, role1_.description as descript2_0_1_, role1_.role_cd as role_cd3_0_1_, role1_.role_name as role_nam4_0_1_ from user_role roles0_ inner join role role1_ on roles0_.role_id=role1_.role_id where roles0_.user_id=?
+2022-02-25 10:19:09.379 DEBUG 18164 --- [http-nio-9999-exec-1] org.hibernate.SQL                        : select user0_.user_id as user_id1_1_, user0_.active_flg as active_f2_1_, user0_.full_name as full_nam3_1_, user0_.number_code as number_c4_1_, user0_.password as password5_1_, user0_.status as status6_1_, user0_.user_name as user_nam7_1_ from user user0_ where user0_.user_name=? and user0_.active_flg=?
+2022-02-25 10:19:09.838  INFO 18164 --- [http-nio-9999-exec-1] c.t.e.controller.auth.AuthController     : Token : eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNjQ1NzU5MTQ5LCJleHAiOjE2NDU4NDU1NDl9.NeIBVSKOi6Nd2GuYFZwDkgz85uXxekQqEY8yov48cb7zJIVoGpeZW-bd5-jofoLRQVD56ibFLMXOHZKHiuPa7g,time = 794
+2022-02-25 10:19:09.850 DEBUG 18164 --- [http-nio-9999-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-02-25 10:19:09.851 DEBUG 18164 --- [http-nio-9999-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [JwtAuthenticationResponse(accessToken=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNjQ1NzU5MTQ5LCJle (truncated)...]
+2022-02-25 10:19:09.866 DEBUG 18164 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
