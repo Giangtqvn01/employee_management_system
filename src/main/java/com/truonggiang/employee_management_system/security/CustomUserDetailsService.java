@@ -2,7 +2,6 @@ package com.truonggiang.employee_management_system.security;
 
 import com.truonggiang.employee_management_system.entity.User;
 import com.truonggiang.employee_management_system.repository.UserRepository;
-import com.truonggiang.employee_management_system.utils.Common;
 import com.truonggiang.employee_management_system.utils.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -21,21 +20,11 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Transactional
     public UserDetails loadUserByUsername(String loginId)
             throws UsernameNotFoundException {
-        if (Common.validateEmail(loginId)) {
-            User user = userRepository.findByUserNameAndActiveFlg(loginId, Constant.ACTIVE_FLG.NOT_DELETE)
-                    .orElseThrow(() ->
-                            new UsernameNotFoundException("User not found with username or email : " + loginId)
-                    );
-            return UserPrincipal.create(user);
-        } else {
-            // Let people login with either username or email
-            User user = userRepository.findByNumberCodeAndActiveFlg(loginId, Constant.ACTIVE_FLG.NOT_DELETE)
-                    .orElseThrow(() ->
-                            new UsernameNotFoundException("User not found with username or email : " + loginId)
-                    );
-
-            return UserPrincipal.create(user);
-        }
+        User user = userRepository.findByUserNameAndActiveFlg(loginId, Constant.ACTIVE_FLG.NOT_DELETE)
+                .orElseThrow(() ->
+                        new UsernameNotFoundException("User not found with username or email : " + loginId)
+                );
+        return UserPrincipal.create(user);
     }
 
     // This method is used by JWTAuthenticationFilter
