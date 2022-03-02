@@ -10,7 +10,5 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Integer> {
     Optional<User> findByUserId(int id);
 
-    Optional<User> findByNumberCodeAndActiveFlg(String loginId, Integer activeFlg);
-
     Optional<User> findByUserNameAndActiveFlg(String loginId, Integer activeFlg);
 }

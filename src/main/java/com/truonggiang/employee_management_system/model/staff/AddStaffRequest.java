@@ -7,6 +7,7 @@ import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.sql.Timestamp;
 
 @Data
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
@@ -25,5 +26,13 @@ public class AddStaffRequest {
     @NotNull
     private Integer positionId;
     @NotNull
-    private Integer salaryStaff;
+    @SQLInjectionSafe
+    private String salaryStaff;
+    @NotNull
+    private Integer gender;
+    @NotNull
+    private Timestamp contractDate;
+    @NotBlank
+    @SQLInjectionSafe
+    private String urlAvatar;
 }
