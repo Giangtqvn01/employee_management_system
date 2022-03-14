@@ -3,6 +3,8 @@ package com.truonggiang.employee_management_system.service.staff;
 import com.truonggiang.employee_management_system.entity.*;
 import com.truonggiang.employee_management_system.exception.AppException;
 import com.truonggiang.employee_management_system.model.BaseModel;
+import com.truonggiang.employee_management_system.model.PagedResponeMapper;
+import com.truonggiang.employee_management_system.model.PagedResponse;
 import com.truonggiang.employee_management_system.model.ResponseModel;
 import com.truonggiang.employee_management_system.model.staff.AddStaffRequest;
 import com.truonggiang.employee_management_system.model.staff.UpdateStaffRequest;
@@ -14,10 +16,14 @@ import com.truonggiang.employee_management_system.security.UserPrincipal;
 import com.truonggiang.employee_management_system.utils.Constant;
 import com.truonggiang.employee_management_system.utils.HtmlUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import java.sql.Timestamp;
 import java.time.Instant;
@@ -209,6 +215,34 @@ public class StaffServiceImpl implements StaffService {
             ResponseModel model = new ResponseModel();
             model.setData(error);
             model.setDescription("Server error!");
+            model.setResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+            return model;
+        }
+    }
+
+    @Override
+    public ResponseModel getStaff(UserPrincipal userPrincipal, String staffRequest, Integer page, Integer size) {
+        ResponseModel model = new ResponseModel();
+        String message = "";
+        try {
+            if(StringUtils.isEmpty(staffRequest)) staffRequest="";
+            HtmlUtil.validateRequest(staffRequest);
+            Pageable pageable = PageRequest.of(page - 1, size);
+            Page<Staff> drgNotifications = staffRepository.getStaff(staffRequest, pageable);
+            PagedResponse pagedResponse = PagedResponeMapper.mapper(drgNotifications);
+
+            message = "Get all notification in store success!";
+            model.setData(pagedResponse);
+            model.setDescription(message);
+            model.setResponseStatus(HttpStatus.OK);
+
+            return model;
+
+        } catch (RuntimeException e) {
+            message = "Server error!";
+            BaseModel error = new BaseModel(HttpStatus.INTERNAL_SERVER_ERROR.value(), message);
+            model.setData(error);
+            model.setDescription(message);
             model.setResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR);
             return model;
         }
