@@ -24,4 +24,9 @@ public interface Constant {
         Integer TIMEKEEPING_START = 1;
         Integer TIMEKEEPING_END = 0;
     }
+
+    interface PAGINATION {
+        final int DEFAULT_PAGE = 0;
+        final int DEFAULT_PAGE_SIZE = 20;
+    }
 }

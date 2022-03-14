@@ -14,4 +14,6 @@ public interface StaffService {
     ResponseModel getOneStaff(UserPrincipal userPrincipal, String staffNo);
 
     ResponseModel updateUrlAvatarStaff(UserPrincipal userPrincipal, UpdateUrlAvatarStaffRequest request);
+
+    ResponseModel getStaff(UserPrincipal userPrincipal, String staffRequest, Integer page, Integer size);
 }
