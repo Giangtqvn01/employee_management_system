@@ -39,7 +39,7 @@ public class StaffServiceImpl implements StaffService {
     public ResponseModel addStaff(UserPrincipal userPrincipal, AddStaffRequest request) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
             request = (AddStaffRequest) HtmlUtil.validateRequest(request);
 
             Staff staff = new Staff();
@@ -96,7 +96,7 @@ public class StaffServiceImpl implements StaffService {
     public ResponseModel updateStaff(UserPrincipal userPrincipal, UpdateStaffRequest request) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
             request = (UpdateStaffRequest) HtmlUtil.validateRequest(request);
             Staff staff = staffRepository.getByStaffNoAndActiveFlg(request.getStaffNo(), Constant.ACTIVE_FLG.NOT_DELETE)
                     .orElse(null);
@@ -150,7 +150,7 @@ public class StaffServiceImpl implements StaffService {
     public ResponseModel getOneStaff(UserPrincipal userPrincipal, String staffNo) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
             staffNo = (String) HtmlUtil.validateRequest(staffNo);
             Staff staff = staffRepository.getByStaffNoAndActiveFlg(staffNo, Constant.ACTIVE_FLG.NOT_DELETE)
                     .orElse(null);
@@ -182,7 +182,7 @@ public class StaffServiceImpl implements StaffService {
     public ResponseModel updateUrlAvatarStaff(UserPrincipal userPrincipal, UpdateUrlAvatarStaffRequest request) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
             request = (UpdateUrlAvatarStaffRequest) HtmlUtil.validateRequest(request);
             Staff staff = staffRepository.getByStaffNoAndActiveFlg(request.getStaffNo(), Constant.ACTIVE_FLG.NOT_DELETE)
                     .orElse(null);

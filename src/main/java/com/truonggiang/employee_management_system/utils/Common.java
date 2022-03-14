@@ -2,6 +2,7 @@ package com.truonggiang.employee_management_system.utils;
 
 import org.springframework.util.StringUtils;
 
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,4 +23,11 @@ public class Common {
         return text;
     }
 
+    public static String longTimeToHHMM(long time) {
+        if (time < 0) time = time * (-1);
+        String hms = String.format("%02d:%02d", TimeUnit.MILLISECONDS.toHours(time),
+                TimeUnit.MILLISECONDS.toMinutes(time) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(time)));
+        System.out.println(hms);
+        return hms;
+    }
 }

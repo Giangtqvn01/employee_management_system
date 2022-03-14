@@ -31,7 +31,7 @@ public class AuthServiceImpl implements AuthService {
     public ResponseModel registerUser(RegisterRequest request) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
             request = (RegisterRequest) HtmlUtil.validateRequest(request);
 
             User newAccount = new User();
