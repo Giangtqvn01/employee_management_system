@@ -27,7 +27,7 @@ public class EmployeeTimesheetServiceImpl implements EmployeeTimesheetService {
     public ResponseModel createTimekeeping(UserPrincipal userPrincipal, CreateTimekeepingRequest request) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
             HtmlUtil.validateRequest(request);
             EmployeeTimesheet employeeTimesheet = new EmployeeTimesheet();
             employeeTimesheet.setStaffNo(request.getStaffNo());
@@ -62,7 +62,7 @@ public class EmployeeTimesheetServiceImpl implements EmployeeTimesheetService {
     public ResponseModel checkInEmployee(UserPrincipal userPrincipal, String staffNo) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
             HtmlUtil.validateRequest(staffNo);
 
             EmployeeTimesheet employeeTimesheet = new EmployeeTimesheet();
@@ -105,7 +105,7 @@ public class EmployeeTimesheetServiceImpl implements EmployeeTimesheetService {
     public ResponseModel checkOutEmployee(UserPrincipal userPrincipal, Integer employeeTimesheetId) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
 
             EmployeeTimesheet employeeTimesheet = employeeTimesheetRepository
                     .getByEmployeeTimesheetIdAndActiveFlgAndTimekeepingStatus(
@@ -153,7 +153,7 @@ public class EmployeeTimesheetServiceImpl implements EmployeeTimesheetService {
     public ResponseModel updateTimekeeping(UserPrincipal userPrincipal, UpdateTimekeepingRequest request) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
             HtmlUtil.validateRequest(request);
 
             EmployeeTimesheet employeeTimesheet = employeeTimesheetRepository
@@ -193,7 +193,7 @@ public class EmployeeTimesheetServiceImpl implements EmployeeTimesheetService {
     public ResponseModel deleteTimekeeping(UserPrincipal userPrincipal, Integer employeeTimesheetId) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
             HtmlUtil.validateRequest(employeeTimesheetId);
 
             EmployeeTimesheet employeeTimesheet = employeeTimesheetRepository.getByEmployeeTimesheetIdAndActiveFlg(
@@ -206,6 +206,35 @@ public class EmployeeTimesheetServiceImpl implements EmployeeTimesheetService {
             message = "Update timesheet staff success!";
             BaseModel success = new BaseModel(HttpStatus.OK.value(), message);
             model.setData(success);
+            model.setDescription(message);
+            model.setResponseStatus(HttpStatus.OK);
+            return model;
+
+        } catch (RuntimeException e) {
+            BaseModel error = new BaseModel(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Server error!");
+            ResponseModel model = new ResponseModel();
+            model.setData(error);
+            model.setDescription("Server error!");
+            model.setResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+            return model;
+        }
+    }
+
+    @Override
+    public ResponseModel getOneTimekeeping(UserPrincipal userPrincipal, Timestamp timekeepingDate) {
+        try {
+            ResponseModel model = new ResponseModel();
+            String message;
+            HtmlUtil.validateRequest(timekeepingDate);
+
+            EmployeeTimesheet employeeTimesheet = employeeTimesheetRepository.getByEmployeeTimesheetDateAndActiveFlgAndStaffNo(
+                            timekeepingDate,
+                            Constant.ACTIVE_FLG.NOT_DELETE, userPrincipal.getNumberCode())
+                    .orElse(null);
+
+            message = "Get one timesheet staff success!";
+            BaseModel success = new BaseModel(HttpStatus.OK.value(), message);
+            model.setData(employeeTimesheet);
             model.setDescription(message);
             model.setResponseStatus(HttpStatus.OK);
             return model;

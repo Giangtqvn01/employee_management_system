@@ -5,6 +5,8 @@ import com.truonggiang.employee_management_system.model.employeeTimesheet.Create
 import com.truonggiang.employee_management_system.model.employeeTimesheet.UpdateTimekeepingRequest;
 import com.truonggiang.employee_management_system.security.UserPrincipal;
 
+import java.sql.Timestamp;
+
 public interface EmployeeTimesheetService {
     ResponseModel createTimekeeping(UserPrincipal userPrincipal, CreateTimekeepingRequest request);
 
@@ -15,4 +17,6 @@ public interface EmployeeTimesheetService {
     ResponseModel updateTimekeeping(UserPrincipal userPrincipal, UpdateTimekeepingRequest request);
 
     ResponseModel deleteTimekeeping(UserPrincipal userPrincipal, Integer employeeTimesheetId);
+
+    ResponseModel getOneTimekeeping(UserPrincipal userPrincipal, Timestamp timekeepingDate);
 }

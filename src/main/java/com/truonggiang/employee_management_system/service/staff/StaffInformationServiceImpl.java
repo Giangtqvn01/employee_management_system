@@ -42,7 +42,7 @@ public class StaffInformationServiceImpl implements StaffInformationService {
     public ResponseModel getOneStaffInformation(UserPrincipal userPrincipal, String staffNo) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
             HtmlUtil.validateRequest(staffNo);
             StaffInformation staffInformation = staffInformationRepository.getByStaffNo(staffNo)
                     .orElse(null);
@@ -69,7 +69,7 @@ public class StaffInformationServiceImpl implements StaffInformationService {
     public ResponseModel createStaffInformation(StaffInformationRequest request) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
 
             StaffInformation staffInformation = new StaffInformation();
             staffInformation.setStaffNo(request.getStaffNo());
@@ -110,7 +110,7 @@ public class StaffInformationServiceImpl implements StaffInformationService {
     public ResponseModel updateStaffInformation(StaffInformationRequest request, StaffInformation staffInformation) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
 
             if (staffInformation.getStaffInformationId().intValue() != request.getStaffInformationId().intValue()) {
                 message = "Staff not found";

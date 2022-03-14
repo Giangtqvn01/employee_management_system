@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
     public ResponseModel changePassword(UserPrincipal userPrincipal, ChangePasswordRequest request) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
             request = (ChangePasswordRequest) HtmlUtil.validateRequest(request);
             User user = userRepository.findByUserId(userPrincipal.getUserId())
                     .orElseThrow(() -> new BadRequestException("Not found account!"));
@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService {
     public ResponseModel resetPassword(UserPrincipal userPrincipal, Integer userId) {
         try {
             ResponseModel model = new ResponseModel();
-            String message = "";
+            String message;
             
             User user = userRepository.findByUserId(userId)
                     .orElseThrow(() -> new BadRequestException("Not found account!"));
