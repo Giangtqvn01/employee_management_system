@@ -19,8 +19,8 @@ public class StaffInformation {
     @Column(name = "staff_information_id")
     private Integer staffInformationId;
     @Basic
-    @Column(name = "staff_id")
-    private Integer staffId;
+    @Column(name = "staff_no")
+    private String staffNo;
     @Basic
     @Column(name = "story_name")
     private String storyName;
@@ -43,10 +43,13 @@ public class StaffInformation {
     @Column(name = "account_holder_name")
     private String accountHolderName;
     @Basic
+    @Column(name = "bank_name")
+    private String bankName;
+    @Basic
     @Column(name = "account_number")
     private String accountNumber;
     @Basic
-    @Column(name = "bank_ branch")
+    @Column(name = "bank_branch")
     private String bankBranch;
     @Basic
     @Column(name = "emergency_contact_name")

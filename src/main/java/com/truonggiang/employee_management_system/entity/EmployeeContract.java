@@ -1,5 +1,6 @@
 package com.truonggiang.employee_management_system.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
@@ -19,9 +20,6 @@ public class EmployeeContract {
     @Id
     @Column(name = "employee_contract_id")
     private Integer employeeContractId;
-    @Basic
-    @Column(name = "staff_id")
-    private Integer staffId;
     @Basic
     @Column(name = "status", insertable = false, nullable = false)
     private Integer status;
@@ -49,5 +47,10 @@ public class EmployeeContract {
     @Basic
     @Column(name = "position_id")
     private Integer positionId;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "staff_id", referencedColumnName = "staff_id", nullable = false)
+    @JsonIgnore
+    private Staff staff;
 
 }

@@ -8,13 +8,25 @@ public interface Constant {
 
     interface ROLE {
         String admin = "ADMIN";
-        String staff ="STAFF";
+        String staff = "STAFF";
     }
+
     interface LOGIN {
         Integer FIRST = 1;
-        Integer MANY_TIMES=0;
+        Integer MANY_TIMES = 0;
     }
+
     interface PASSWORD {
-        String DEFAULT="123456";
+        String DEFAULT = "123456";
+    }
+
+    interface TIMEKEEPING_STATUS {
+        Integer TIMEKEEPING_START = 1;
+        Integer TIMEKEEPING_END = 0;
+    }
+
+    interface PAGINATION {
+        final int DEFAULT_PAGE = 0;
+        final int DEFAULT_PAGE_SIZE = 20;
     }
 }
