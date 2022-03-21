@@ -9,6 +9,8 @@ import com.truonggiang.employee_management_system.security.JwtTokenProvider;
 import com.truonggiang.employee_management_system.service.auth.AuthService;
 import com.truonggiang.employee_management_system.service.user.UserService;
 import com.truonggiang.employee_management_system.utils.Logit;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -44,6 +46,12 @@ public class AuthController {
     AuthenticationManager authenticationManager;
 
     @PostMapping("/signup")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Success|OK"),
+            @ApiResponse(code = 401, message = "Not Authorized!"),
+            @ApiResponse(code = 403, message = "Forbidden!"),
+            @ApiResponse(code = 404, message = "Not Found!") })
+
     public ResponseEntity<?> registerUser(@Valid @RequestBody RegisterRequest request) {
         log.info("Register name =" + request.getFullName());
         long start = System.currentTimeMillis();
