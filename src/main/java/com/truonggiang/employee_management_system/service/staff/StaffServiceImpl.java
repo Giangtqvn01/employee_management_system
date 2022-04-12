@@ -15,6 +15,7 @@ import com.truonggiang.employee_management_system.repository.staff.StaffReposito
 import com.truonggiang.employee_management_system.security.UserPrincipal;
 import com.truonggiang.employee_management_system.utils.Constant;
 import com.truonggiang.employee_management_system.utils.HtmlUtil;
+import com.truonggiang.employee_management_system.utils.VNCharacterUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -54,15 +55,16 @@ public class StaffServiceImpl implements StaffService {
             staff.setPhoneNo(request.getPhoneNo());
             staff.setGender(request.getGender());
             String nameStaff = standardizedStrings(request.getLastName(), request.getFirstName());
-            Integer countEmailStaff = staffRepository.countEmailStaffFollowName(nameStaff);
-            staff.setEmail(nameStaff + (countEmailStaff + 1) + "@gmail.com");
+            String convertNameStaff = VNCharacterUtils.removeAccent(nameStaff);
+            Integer countEmailStaff = staffRepository.countEmailStaffFollowName(convertNameStaff);
+            staff.setEmail(convertNameStaff + (countEmailStaff + 1) + "@gmail.com");
             Integer countStaff = staffRepository.getCountStaff() + 1;
             String staffCode = "00000000".substring(0, 8 - (countStaff + "").length()) + countStaff;
             staff.setStaffNo(staffCode);
             staff.setUrlAvatar(request.getUrlAvatar());
 
             User user = new User();
-            user.setUserName(staff.getEmail());
+            user.setUserName(convertNameStaff + (countEmailStaff + 1));
             user.setFullName(staff.getLastName() + " " + staff.getFirstName());
             user.setPassword(passwordEncoder.encode(Constant.PASSWORD.DEFAULT));
             user.setNumberCode(staffCode);

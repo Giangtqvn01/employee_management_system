@@ -43,16 +43,16 @@ public class AuthController {
     @Autowired
     AuthenticationManager authenticationManager;
 
-    @PostMapping("/signup")
-    public ResponseEntity<?> registerUser(@Valid @RequestBody RegisterRequest request) {
-        log.info("Register name =" + request.getFullName());
-        long start = System.currentTimeMillis();
-        ResponseModel model = authService.registerUser(request);
-        long end = System.currentTimeMillis();
-        long diff = end - start;
-        log.info("Code = " + model.getResponseStatus() + "," + model.getDescription() + ",time = " + diff);
-        return new ResponseEntity(model.getData(), model.getResponseStatus());
-    }
+//    @PostMapping("/signup")
+//    public ResponseEntity<?> registerUser(@Valid @RequestBody RegisterRequest request) {
+//        log.info("Register name =" + request.getFullName());
+//        long start = System.currentTimeMillis();
+//        ResponseModel model = authService.registerUser(request);
+//        long end = System.currentTimeMillis();
+//        long diff = end - start;
+//        log.info("Code = " + model.getResponseStatus() + "," + model.getDescription() + ",time = " + diff);
+//        return new ResponseEntity(model.getData(), model.getResponseStatus());
+//    }
 
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest request) {
