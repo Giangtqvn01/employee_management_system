@@ -9,6 +9,8 @@ import com.truonggiang.employee_management_system.security.JwtTokenProvider;
 import com.truonggiang.employee_management_system.service.auth.AuthService;
 import com.truonggiang.employee_management_system.service.user.UserService;
 import com.truonggiang.employee_management_system.utils.Logit;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,6 +44,7 @@ public class AuthController {
 
     @Autowired
     AuthenticationManager authenticationManager;
+
 
 //    @PostMapping("/signup")
 //    public ResponseEntity<?> registerUser(@Valid @RequestBody RegisterRequest request) {
