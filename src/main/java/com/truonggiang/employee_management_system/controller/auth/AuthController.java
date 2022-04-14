@@ -45,22 +45,17 @@ public class AuthController {
     @Autowired
     AuthenticationManager authenticationManager;
 
-    @PostMapping("/signup")
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success|OK"),
-            @ApiResponse(code = 401, message = "Not Authorized!"),
-            @ApiResponse(code = 403, message = "Forbidden!"),
-            @ApiResponse(code = 404, message = "Not Found!") })
 
-    public ResponseEntity<?> registerUser(@Valid @RequestBody RegisterRequest request) {
-        log.info("Register name =" + request.getFullName());
-        long start = System.currentTimeMillis();
-        ResponseModel model = authService.registerUser(request);
-        long end = System.currentTimeMillis();
-        long diff = end - start;
-        log.info("Code = " + model.getResponseStatus() + "," + model.getDescription() + ",time = " + diff);
-        return new ResponseEntity(model.getData(), model.getResponseStatus());
-    }
+//    @PostMapping("/signup")
+//    public ResponseEntity<?> registerUser(@Valid @RequestBody RegisterRequest request) {
+//        log.info("Register name =" + request.getFullName());
+//        long start = System.currentTimeMillis();
+//        ResponseModel model = authService.registerUser(request);
+//        long end = System.currentTimeMillis();
+//        long diff = end - start;
+//        log.info("Code = " + model.getResponseStatus() + "," + model.getDescription() + ",time = " + diff);
+//        return new ResponseEntity(model.getData(), model.getResponseStatus());
+//    }
 
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest request) {
