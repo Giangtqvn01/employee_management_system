@@ -19,4 +19,6 @@ public interface EmployeeTimesheetService {
     ResponseModel deleteTimekeeping(UserPrincipal userPrincipal, Integer employeeTimesheetId);
 
     ResponseModel getOneTimekeeping(UserPrincipal userPrincipal, Timestamp timekeepingDate);
+
+    ResponseModel checkInOrOutAndroid(UserPrincipal userPrincipal);
 }
