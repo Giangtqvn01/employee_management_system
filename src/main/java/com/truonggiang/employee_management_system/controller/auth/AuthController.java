@@ -44,7 +44,7 @@ public class AuthController {
 
     @Autowired
     AuthenticationManager authenticationManager;
-
+  
 //    @PostMapping("/signup")
 //    @ApiResponses(value = {
 //            @ApiResponse(code = 200, message = "Success|OK"),
@@ -70,7 +70,7 @@ public class AuthController {
             Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getUserName(), request.getPassword()));
             User account = authService.getAccountInfoByLoginId(request.getUserName());
             if (account == null) {
-                return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+                return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);
             }
 
             SecurityContextHolder.getContext().setAuthentication(authenticate);
@@ -82,7 +82,7 @@ public class AuthController {
         } catch (Exception e) {
             log.info("User name or password fails! ");
             log.info(e.getMessage(), e);
-            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);
         }
     }
 }

@@ -36,7 +36,7 @@ public class StaffController {
         return new ResponseEntity(model.getData(), model.getResponseStatus());
     }
 
-    @PostMapping("/update-staff")
+    @PutMapping("/update-staff")
     public ResponseEntity<?> updateStaff(@CurrentUser UserPrincipal userPrincipal,
                                          @RequestBody @Valid UpdateStaffRequest request) {
         log.info("Update staff ");
@@ -60,7 +60,7 @@ public class StaffController {
         return new ResponseEntity(model.getData(), model.getResponseStatus());
     }
 
-    @PostMapping("/update-url-avatar")
+    @PutMapping("/update-url-avatar")
     public ResponseEntity<?> updateUrlAvatarStaff(@CurrentUser UserPrincipal userPrincipal,
                                                   @RequestBody @Valid UpdateUrlAvatarStaffRequest request) {
         log.info("Update staff ");

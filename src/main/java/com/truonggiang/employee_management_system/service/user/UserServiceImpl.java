@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
             User user = userRepository.findByUserId(userPrincipal.getUserId())
                     .orElseThrow(() -> new BadRequestException("Not found account!"));
             String password = passwordEncoder.encode(request.getPassword());
-            if (!passwordEncoder.matches(password, user.getPassword())) {
+            if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
                 message = "Update password failed! Wrong password or username. ";
                 BaseModel success = new BaseModel(HttpStatus.BAD_REQUEST.value(), message);
                 model.setData(success);
@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
                 model.setResponseStatus(HttpStatus.BAD_REQUEST);
                 return model;
             }
-            user.setPassword(passwordEncoder.encode(request.getPassword()));
+            user.setPassword(passwordEncoder.encode(request.getNewPassword()));
             user.setLoginFistTime(Constant.LOGIN.MANY_TIMES);
             userRepository.save(user);
 

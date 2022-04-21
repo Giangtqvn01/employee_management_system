@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.Objects;
 
 @Service
 public class EmployeeTimesheetServiceImpl implements EmployeeTimesheetService {
@@ -132,7 +133,7 @@ public class EmployeeTimesheetServiceImpl implements EmployeeTimesheetService {
             employeeTimesheet.setUpdatedDate(dateCheckOut);
             employeeTimesheetRepository.save(employeeTimesheet);
 
-            message = "Check in staff success!";
+            message = "Check out staff success!";
             BaseModel success = new BaseModel(HttpStatus.OK.value(), message);
             model.setData(success);
             model.setDescription(message);
@@ -239,6 +240,36 @@ public class EmployeeTimesheetServiceImpl implements EmployeeTimesheetService {
             model.setResponseStatus(HttpStatus.OK);
             return model;
 
+        } catch (RuntimeException e) {
+            BaseModel error = new BaseModel(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Server error!");
+            ResponseModel model = new ResponseModel();
+            model.setData(error);
+            model.setDescription("Server error!");
+            model.setResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+            return model;
+        }
+    }
+
+    @Override
+    public ResponseModel checkInOrOutAndroid(UserPrincipal userPrincipal) {
+        try {
+            EmployeeTimesheet employeeTimesheet = employeeTimesheetRepository.getByEmployeeTimesheetDateAndActiveFlgAndStaffNo(
+                            new Timestamp(System.currentTimeMillis()),
+                            Constant.ACTIVE_FLG.NOT_DELETE, userPrincipal.getNumberCode())
+                    .orElse(null);
+            if (employeeTimesheet == null){
+                return this.checkInEmployee(userPrincipal, userPrincipal.getNumberCode());
+            }else if(Objects.equals(employeeTimesheet.getTimekeepingStatus(), Constant.TIMEKEEPING_STATUS.TIMEKEEPING_START)) {
+                return this.checkOutEmployee(userPrincipal,employeeTimesheet.getEmployeeTimesheetId());
+            }
+
+            String message = "Check out staff success!";
+            ResponseModel model = new ResponseModel();
+            BaseModel success = new BaseModel(HttpStatus.OK.value(), message);
+            model.setData(success);
+            model.setDescription(message);
+            model.setResponseStatus(HttpStatus.OK);
+            return model;
         } catch (RuntimeException e) {
             BaseModel error = new BaseModel(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Server error!");
             ResponseModel model = new ResponseModel();
