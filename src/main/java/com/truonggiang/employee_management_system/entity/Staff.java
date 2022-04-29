@@ -90,6 +90,10 @@ public class Staff {
     @Column(name = "email")
     private String email;
 
+    @Basic
+    @Column(name = "staff_manager_id")
+    private Integer staffManagerId;
+
 
     @OneToMany(mappedBy = "staff",
             cascade = CascadeType.ALL,

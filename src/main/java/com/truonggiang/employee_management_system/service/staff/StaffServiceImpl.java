@@ -6,10 +6,9 @@ import com.truonggiang.employee_management_system.model.BaseModel;
 import com.truonggiang.employee_management_system.model.PagedResponeMapper;
 import com.truonggiang.employee_management_system.model.PagedResponse;
 import com.truonggiang.employee_management_system.model.ResponseModel;
-import com.truonggiang.employee_management_system.model.staff.AddStaffRequest;
-import com.truonggiang.employee_management_system.model.staff.UpdateStaffRequest;
-import com.truonggiang.employee_management_system.model.staff.UpdateUrlAvatarStaffRequest;
+import com.truonggiang.employee_management_system.model.staff.*;
 import com.truonggiang.employee_management_system.repository.UserRepository;
+import com.truonggiang.employee_management_system.repository.department.DepartmentRepository;
 import com.truonggiang.employee_management_system.repository.role.RoleRepository;
 import com.truonggiang.employee_management_system.repository.staff.StaffRepository;
 import com.truonggiang.employee_management_system.security.UserPrincipal;
@@ -28,7 +27,10 @@ import org.springframework.util.StringUtils;
 
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class StaffServiceImpl implements StaffService {
@@ -40,6 +42,8 @@ public class StaffServiceImpl implements StaffService {
     private PasswordEncoder passwordEncoder;
     @Autowired
     private RoleRepository roleRepository;
+    @Autowired
+    private DepartmentRepository departmentRepository;
 
     @Override
     @Transactional
@@ -62,6 +66,7 @@ public class StaffServiceImpl implements StaffService {
             String staffCode = "00000000".substring(0, 8 - (countStaff + "").length()) + countStaff;
             staff.setStaffNo(staffCode);
             staff.setUrlAvatar(request.getUrlAvatar());
+            staff.setStaffManagerId(request.getStaffManagerId());
 
             User user = new User();
             user.setUserName(convertNameStaff + (countEmailStaff + 1));
@@ -116,7 +121,7 @@ public class StaffServiceImpl implements StaffService {
                 model.setResponseStatus(HttpStatus.BAD_REQUEST);
                 return model;
             }
-
+            staff.setStaffManagerId(request.getStaffManagerId());
             staff.setPhoneNo(request.getPhoneNo());
             staff.setGender(request.getGender());
             staff.setMaritalStatus(request.getMaritalStatus());
@@ -227,7 +232,7 @@ public class StaffServiceImpl implements StaffService {
         ResponseModel model = new ResponseModel();
         String message = "";
         try {
-            if(StringUtils.isEmpty(staffRequest)) staffRequest="";
+            if (StringUtils.isEmpty(staffRequest)) staffRequest = "";
             HtmlUtil.validateRequest(staffRequest);
             Pageable pageable = PageRequest.of(page - 1, size);
             Page<Staff> drgNotifications = staffRepository.getStaff(staffRequest, pageable);
@@ -240,6 +245,41 @@ public class StaffServiceImpl implements StaffService {
 
             return model;
 
+        } catch (RuntimeException e) {
+            message = "Server error!";
+            BaseModel error = new BaseModel(HttpStatus.INTERNAL_SERVER_ERROR.value(), message);
+            model.setData(error);
+            model.setDescription(message);
+            model.setResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+            return model;
+        }
+    }
+
+    @Override
+    public ResponseModel getStaffByDepartment(UserPrincipal userPrincipal, GetStaffByDepartmentRequest request) {
+        ResponseModel model = new ResponseModel();
+        String message = "";
+        try {
+            List<StaffByDepartment> listStaff = staffRepository.getStaffByDepartment(request);
+            List<Department> departments = departmentRepository.getDepartmentByActiveFlgAndStatus(Constant.ACTIVE_FLG.NOT_DELETE, 1);
+            List<StaffByDepartmentResponse> responses = new ArrayList<>();
+            for (Department department : departments) {
+                StaffByDepartmentResponse response = new StaffByDepartmentResponse();
+                response.setDepartmentName(department.getDepartmentName());
+                response.setDepartmentCd(department.getDepartmentCd());
+                List<StaffByDepartment> list = listStaff.stream().filter(staffByDepartment ->
+                                department.getDepartmentCd().equals(staffByDepartment.getDepartmentCd())
+                                        && !org.apache.commons.lang3.StringUtils.isEmpty(staffByDepartment.getLastName()))
+                        .collect(Collectors.toList());
+                response.setStaffByDepartments(list);
+                responses.add(response);
+            }
+
+            message = "Get staff by department success!";
+            model.setData(responses);
+            model.setDescription(message);
+            model.setResponseStatus(HttpStatus.OK);
+            return model;
         } catch (RuntimeException e) {
             message = "Server error!";
             BaseModel error = new BaseModel(HttpStatus.INTERNAL_SERVER_ERROR.value(), message);
