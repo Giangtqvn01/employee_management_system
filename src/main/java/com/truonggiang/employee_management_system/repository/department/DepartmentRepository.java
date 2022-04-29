@@ -13,7 +13,8 @@ import java.util.Optional;
 public interface DepartmentRepository extends JpaRepository<Department, Integer> {
     Optional<Department> getDepartmentByActiveFlgAndDepartmentId(Integer activeFlg, Integer departmentId);
 
-    Optional<Department> getDepartmentByDepartmentId( Integer departmentId);
+    Optional<Department> getDepartmentByDepartmentId(Integer departmentId);
+
     @Query("SELECT d FROM Department d" +
             " where d.activeFlg =:activeFlg " +
             "and d.status =:status " +
@@ -22,4 +23,6 @@ public interface DepartmentRepository extends JpaRepository<Department, Integer>
     List<Department> getDepartmentByActiveFlgAndStatusAndDepartmentName(@Param("activeFlg") Integer activeFlg,
                                                                         @Param("status") Integer status,
                                                                         @Param("departmentName") String departmentName);
+
+    List<Department> getDepartmentByActiveFlgAndStatus(Integer activeFlg, Integer status);
 }

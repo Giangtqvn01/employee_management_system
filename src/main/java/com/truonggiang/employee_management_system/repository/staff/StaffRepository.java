@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface StaffRepository extends JpaRepository<Staff, Integer> {
+public interface StaffRepository extends JpaRepository<Staff, Integer>,StaffRepositoryCustom {
 
     @Query(value = "select count(st.staff_id) from staff st where st.email like concat(:nameStaff,'%@gmail.com')", nativeQuery = true)
     Integer countEmailStaffFollowName(@Param("nameStaff") String nameStaff);

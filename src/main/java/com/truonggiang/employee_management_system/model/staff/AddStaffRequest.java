@@ -35,4 +35,5 @@ public class AddStaffRequest {
     @NotBlank
     @SQLInjectionSafe
     private String urlAvatar;
+    private Integer staffManagerId;
 }

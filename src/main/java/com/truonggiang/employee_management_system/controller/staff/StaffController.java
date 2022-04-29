@@ -3,6 +3,7 @@ package com.truonggiang.employee_management_system.controller.staff;
 import com.github.rkpunjal.sqlsafe.SQLInjectionSafe;
 import com.truonggiang.employee_management_system.model.ResponseModel;
 import com.truonggiang.employee_management_system.model.staff.AddStaffRequest;
+import com.truonggiang.employee_management_system.model.staff.GetStaffByDepartmentRequest;
 import com.truonggiang.employee_management_system.model.staff.UpdateStaffRequest;
 import com.truonggiang.employee_management_system.model.staff.UpdateUrlAvatarStaffRequest;
 import com.truonggiang.employee_management_system.security.CurrentUser;
@@ -83,6 +84,19 @@ public class StaffController {
         log.info("Get staff request "+staffRequest );
         long start = System.currentTimeMillis();
         ResponseModel responseModel = staffService.getStaff(userPrincipal,staffRequest, page,size );
+        long end = System.currentTimeMillis();
+        long diff = end - start;
+        log.info("Code = " + responseModel.getResponseStatus() + ", " + responseModel.getDescription() + ", time= " + diff);
+        return new ResponseEntity<>(responseModel.getData(), responseModel.getResponseStatus());
+    }
+
+    @PostMapping("/get-staff-by-department")
+    public ResponseEntity<?> getStaffByDepartment(@CurrentUser UserPrincipal userPrincipal,
+                                      @RequestBody @Valid GetStaffByDepartmentRequest request
+    ) {
+        log.info("Get staff by department request "+request );
+        long start = System.currentTimeMillis();
+        ResponseModel responseModel = staffService.getStaffByDepartment(userPrincipal,request);
         long end = System.currentTimeMillis();
         long diff = end - start;
         log.info("Code = " + responseModel.getResponseStatus() + ", " + responseModel.getDescription() + ", time= " + diff);

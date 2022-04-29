@@ -45,5 +45,6 @@ public class UpdateStaffRequest {
     private String urlAvatar;
     private int status;
     private int activeFlg;
+    private Integer staffManagerId;
 
 }
