@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.truonggiang</groupId>
-	<artifactId>employee_management_system</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>hrm-api</artifactId>
+	<version>1.0</version>
 	<name>employee_management_system</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
