@@ -1,18 +1,18 @@
 package com.truonggiang.employee_management_system.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 @Data
 @Entity
 @Table(name = "staff_overtime")
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class StaffOvertime {
+public class StaffOvertime implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "staff_overtime_id")

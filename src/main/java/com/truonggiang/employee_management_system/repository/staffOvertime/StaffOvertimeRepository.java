@@ -19,13 +19,13 @@ public interface StaffOvertimeRepository extends JpaRepository<StaffOvertime, In
     @Query(value = "select so.* from staff_overtime so\n" +
             "join staff s on (so.staff_no =s.staff_no and s.active_flg =1)\n" +
             "where  s.staff_no like concat('%',:staffRequest,'%') \n" +
-            "or concat(s.last_name, ' ', s.fist_name) like concat('%',:staffRequest,'%') \n" +
+            "or concat(s.last_name, ' ', s.first_name) like concat('%',:staffRequest,'%') \n" +
             "or s.email like concat('%',:staffRequest,'%') ",
             countQuery = "select count(*) from (" +
                     " select so.* from staff_overtime so\n" +
                     "join staff s on (so.staff_no =s.staff_no and s.active_flg =1)\n" +
                     "where  s.staff_no like concat('%',:staffRequest,'%') \n" +
-                    "or concat(s.last_name, ' ', s.fist_name) like concat('%',:staffRequest,'%') \n" +
+                    "or concat(s.last_name, ' ', s.first_name) like concat('%',:staffRequest,'%') \n" +
                     "or s.email like concat('%',:staffRequest,'%') " +
                     ")",
             nativeQuery = true)
