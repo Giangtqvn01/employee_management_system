@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class CreateTimekeepingRequest {
     @NotBlank
-    @SQLInjectionSafe
+
     private String staffNo;
     @NotNull
     private Timestamp timekeepingDate;

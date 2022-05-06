@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -21,6 +22,13 @@ public interface EmployeeTimesheetRepository extends JpaRepository<EmployeeTimes
             " where date_format(timekeeping_date, '%Y-%m-%d') = date_format(:timesheetDate, '%Y-%m-%d')" +
             " and staff_no =:staffNo  and active_flg =:activeFlg ", nativeQuery = true)
     Optional<EmployeeTimesheet> getByEmployeeTimesheetDateAndActiveFlgAndStaffNo(
+            @Param("timesheetDate") Timestamp timesheetDate,
+            @Param("activeFlg") Integer activeFlg, @Param("staffNo") String staffNo);
+
+    @Query(value = "select * from employee_timesheet " +
+            " where (:timesheetDate is null or date_format(timekeeping_date, '%Y-%m-%d') = date_format(:timesheetDate, '%Y-%m-%d'))" +
+            " and staff_no =:staffNo  and active_flg =:activeFlg ", nativeQuery = true)
+    List<EmployeeTimesheet> getByTimesheetDateAndActiveFlgAndStaffNo(
             @Param("timesheetDate") Timestamp timesheetDate,
             @Param("activeFlg") Integer activeFlg, @Param("staffNo") String staffNo);
 }

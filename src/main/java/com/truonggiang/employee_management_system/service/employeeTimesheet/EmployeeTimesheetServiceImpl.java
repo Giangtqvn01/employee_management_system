@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Service
@@ -270,6 +271,34 @@ public class EmployeeTimesheetServiceImpl implements EmployeeTimesheetService {
             model.setDescription(message);
             model.setResponseStatus(HttpStatus.OK);
             return model;
+        } catch (RuntimeException e) {
+            BaseModel error = new BaseModel(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Server error!");
+            ResponseModel model = new ResponseModel();
+            model.setData(error);
+            model.setDescription("Server error!");
+            model.setResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+            return model;
+        }
+    }
+
+    @Override
+    public ResponseModel getTimekeeping(UserPrincipal userPrincipal, Timestamp timekeepingDate) {
+        try {
+            ResponseModel model = new ResponseModel();
+            String message;
+//            HtmlUtil.validateRequest(timekeepingDate);
+
+            List<EmployeeTimesheet> employeeTimesheets = employeeTimesheetRepository.getByTimesheetDateAndActiveFlgAndStaffNo(
+                            timekeepingDate,
+                            Constant.ACTIVE_FLG.NOT_DELETE, userPrincipal.getNumberCode());
+
+            message = "Get  timesheet staff success!";
+            BaseModel success = new BaseModel(HttpStatus.OK.value(), message);
+            model.setData(employeeTimesheets);
+            model.setDescription(message);
+            model.setResponseStatus(HttpStatus.OK);
+            return model;
+
         } catch (RuntimeException e) {
             BaseModel error = new BaseModel(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Server error!");
             ResponseModel model = new ResponseModel();

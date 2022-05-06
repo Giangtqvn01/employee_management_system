@@ -12,12 +12,12 @@ import javax.validation.constraints.NotBlank;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class CreateDepartmentRequest {
     @NotBlank
-    @SQLInjectionSafe
+
     private String departmentName;
-    @SQLInjectionSafe
+
     @NotBlank
     private String departmentCd;
-    @SQLInjectionSafe
+
     private String description;
 
 }

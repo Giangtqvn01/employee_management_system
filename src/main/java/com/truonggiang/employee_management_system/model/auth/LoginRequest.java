@@ -12,10 +12,10 @@ import javax.validation.constraints.NotBlank;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class LoginRequest {
     @NotBlank
-    @SQLInjectionSafe
+
     private String userName;
     @NotBlank
     @Min(6)
-    @SQLInjectionSafe
+
     private String password;
 }

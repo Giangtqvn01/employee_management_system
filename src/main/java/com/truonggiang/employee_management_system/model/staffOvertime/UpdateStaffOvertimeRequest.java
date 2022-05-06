@@ -17,7 +17,7 @@ public class UpdateStaffOvertimeRequest {
     private Timestamp overtimeStart;
     private Timestamp overtimeEnds;
     @NotBlank
-    @SQLInjectionSafe
+
     private String description;
     private Integer status;
     private Integer activeFlg;
