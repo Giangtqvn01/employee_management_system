@@ -14,11 +14,11 @@ public class CreatePositionRequest {
     @NotNull
     private Integer departmentId;
     @NotBlank
-    @SQLInjectionSafe
+
     private String positionName;
     @NotBlank
-    @SQLInjectionSafe
+
     private String positionCd;
-    @SQLInjectionSafe
+
     private String description;
 }

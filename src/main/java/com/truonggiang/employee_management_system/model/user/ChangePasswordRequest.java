@@ -13,10 +13,10 @@ import javax.validation.constraints.NotBlank;
 public class ChangePasswordRequest {
     @NotBlank
     @Min(5)
-    @SQLInjectionSafe
+
     private String password;
     @NotBlank
     @Min(5)
-    @SQLInjectionSafe
+
     private String newPassword;
 }

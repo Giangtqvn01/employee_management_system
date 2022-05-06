@@ -12,16 +12,16 @@ import javax.validation.constraints.NotBlank;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class RegisterRequest {
     @NotBlank
-    @SQLInjectionSafe
+
     private String userName;
     @NotBlank
     @Min(6)
-    @SQLInjectionSafe
+
     private String password;
     @NotBlank
-    @SQLInjectionSafe
+
     private String fullName;
     @NotBlank
-    @SQLInjectionSafe
+
     private String numberCode;
 }

@@ -11,9 +11,9 @@ import javax.validation.constraints.NotBlank;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class UpdateUrlAvatarStaffRequest {
     @NotBlank
-    @SQLInjectionSafe
+
     private String staffNo;
     @NotBlank
-    @SQLInjectionSafe
+
     private String urlImage;
 }

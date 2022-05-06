@@ -21,4 +21,6 @@ public interface EmployeeTimesheetService {
     ResponseModel getOneTimekeeping(UserPrincipal userPrincipal, Timestamp timekeepingDate);
 
     ResponseModel checkInOrOutAndroid(UserPrincipal userPrincipal);
+
+    ResponseModel getTimekeeping(UserPrincipal userPrincipal, Timestamp timekeepingDate);
 }
