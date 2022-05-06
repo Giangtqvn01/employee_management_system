@@ -13,27 +13,27 @@ import java.sql.Timestamp;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class AddStaffRequest {
     @NotBlank
-    @SQLInjectionSafe
+
     private String firstName;
     @NotBlank
-    @SQLInjectionSafe
+
     private String lastName;
     @NotBlank
-    @SQLInjectionSafe
+
     private String phoneNo;
     @NotNull
     private Integer departmentId;
     @NotNull
     private Integer positionId;
     @NotNull
-    @SQLInjectionSafe
+
     private String salaryStaff;
     @NotNull
     private Integer gender;
     @NotNull
     private Timestamp contractDate;
     @NotBlank
-    @SQLInjectionSafe
+
     private String urlAvatar;
     private Integer staffManagerId;
 }

@@ -16,11 +16,11 @@ public class UpdatePositionRequest {
     @NotNull
     private Integer departmentId;
     @NotBlank
-    @SQLInjectionSafe
+
     private String positionName;
     @NotNull
     private Integer activeFlg;
-    @SQLInjectionSafe
+
     private String description;
     @NotNull
     private Integer status;

@@ -16,12 +16,12 @@ public class UpdateDepartmentRequest {
     @NotNull
     private Integer departmentId;
     @NotBlank
-    @SQLInjectionSafe
+
     private String departmentName;
     @NotNull
     private Integer activeFlg;
     @NotNull
     private Integer status;
-    @SQLInjectionSafe
+
     private String description;
 }

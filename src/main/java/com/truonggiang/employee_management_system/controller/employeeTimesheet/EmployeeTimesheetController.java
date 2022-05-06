@@ -86,8 +86,8 @@ public class EmployeeTimesheetController {
 
     @GetMapping("/get-one-timekeeping")
     public ResponseEntity<?> getOneTimekeeping(@CurrentUser UserPrincipal userPrincipal,
-                                               @RequestParam("timekeeping_date")Timestamp timekeepingDate){
-        log.info("Get one timekeeping "+timekeepingDate);
+                                               @RequestParam("timekeeping_date") Timestamp timekeepingDate) {
+        log.info("Get one timekeeping " + timekeepingDate);
         long start = System.currentTimeMillis();
         ResponseModel model = employeeTimesheetService.getOneTimekeeping(userPrincipal, timekeepingDate);
         long end = System.currentTimeMillis();
@@ -95,11 +95,24 @@ public class EmployeeTimesheetController {
         log.info("Code = " + model.getResponseStatus() + "," + model.getDescription() + ",time = " + diff);
         return new ResponseEntity(model.getData(), model.getResponseStatus());
     }
+
     @GetMapping("/check-in-out-android")
-    public ResponseEntity<?> checkInOrOutAndroid(@CurrentUser UserPrincipal userPrincipal){
+    public ResponseEntity<?> checkInOrOutAndroid(@CurrentUser UserPrincipal userPrincipal) {
         log.info("Check in or out android");
         long start = System.currentTimeMillis();
         ResponseModel model = employeeTimesheetService.checkInOrOutAndroid(userPrincipal);
+        long end = System.currentTimeMillis();
+        long diff = end - start;
+        log.info("Code = " + model.getResponseStatus() + "," + model.getDescription() + ",time = " + diff);
+        return new ResponseEntity(model.getData(), model.getResponseStatus());
+    }
+
+    @GetMapping("/get-timekeeping")
+    public ResponseEntity<?> getTimekeeping(@CurrentUser UserPrincipal userPrincipal,
+                                            @RequestParam(value = "timekeeping_date", required = false) Timestamp timekeepingDate) {
+        log.info("Get one timekeeping ");
+        long start = System.currentTimeMillis();
+        ResponseModel model = employeeTimesheetService.getTimekeeping(userPrincipal, timekeepingDate);
         long end = System.currentTimeMillis();
         long diff = end - start;
         log.info("Code = " + model.getResponseStatus() + "," + model.getDescription() + ",time = " + diff);
