@@ -24,10 +24,10 @@ public class Department {
     @Column(name = "department_cd")
     private String departmentCd;
     @Basic
-    @Column(name = "active_flg")
+    @Column(name = "active_flg", insertable = false)
     private Integer activeFlg;
     @Basic
-    @Column(name = "status")
+    @Column(name = "status", insertable = false)
     private Integer status;
     @Basic
     @Column(name = "description")
