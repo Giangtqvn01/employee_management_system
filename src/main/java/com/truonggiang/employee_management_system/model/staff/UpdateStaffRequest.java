@@ -2,7 +2,6 @@ package com.truonggiang.employee_management_system.model.staff;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import com.github.rkpunjal.sqlsafe.SQLInjectionSafe;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -46,5 +45,9 @@ public class UpdateStaffRequest {
     private int status;
     private int activeFlg;
     private Integer staffManagerId;
+    @NotBlank
+    private String firstName;
+    @NotBlank
+    private String lastName;
 
 }

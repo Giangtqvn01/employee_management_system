@@ -121,6 +121,8 @@ public class StaffServiceImpl implements StaffService {
                 model.setResponseStatus(HttpStatus.BAD_REQUEST);
                 return model;
             }
+            staff.setFirstName(request.getFirstName());
+            staff.setLastName(request.getLastName());
             staff.setStaffManagerId(request.getStaffManagerId());
             staff.setPhoneNo(request.getPhoneNo());
             staff.setGender(request.getGender());
